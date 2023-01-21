@@ -1,0 +1,562 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{986F0506-08B9-49C1-8149-7D1DCD05FDD7}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SmartNursery</RootNamespace>
+    <AssemblyName>SmartNursery</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Accessibility" />
+    <Reference Include="DevExpress.BonusSkins.v19.2" />
+    <Reference Include="DevExpress.Charts.v19.2.Core, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.CodeParser.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Data.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Data.v19.2" />
+    <Reference Include="DevExpress.DataAccess.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.DataAccess.v19.2.UI, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Office.v19.2.Core, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Pdf.v19.2.Core, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.PivotGrid.v19.2.Core, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Printing.v19.2.Core, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Printing.v19.2.Core" />
+    <Reference Include="DevExpress.RichEdit.v19.2.Core, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.RichEdit.v19.2.Export, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Data.Desktop.v19.2" />
+    <Reference Include="DevExpress.Utils.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v19.2" />
+    <Reference Include="DevExpress.Utils.v19.2.UI, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraBars.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraBars.v19.2" />
+    <Reference Include="DevExpress.Sparkline.v19.2.Core" />
+    <Reference Include="DevExpress.XtraCharts.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraCharts.v19.2.Extensions, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraCharts.v19.2.Wizard, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraEditors.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraEditors.v19.2" />
+    <Reference Include="DevExpress.XtraGauges.v19.2.Core, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraGrid.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraNavBar.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPivotGrid.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraPrinting.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraReports.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraReports.v19.2.Extensions, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraRichEdit.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraTreeList.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraVerticalGrid.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Data.OracleClient" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing.Design" />
+    <Reference Include="System.Runtime.Serialization.Formatters.Soap" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DatabaseLayer\DataClasses.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataClasses.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="DatabaseLayer\MainClass.cs" />
+    <Compile Include="DatabaseLayer\PaymentClass.cs" />
+    <Compile Include="DataSet\DataSetCardPrint.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetCardPrint.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FormLayer\ClassForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLayer\ClassForm.Designer.cs">
+      <DependentUpon>ClassForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormLayer\DailyExpensIncmForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLayer\DailyExpensIncmForm.Designer.cs">
+      <DependentUpon>DailyExpensIncmForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormLayer\EmpAddDeductDetForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLayer\EmpAddDeductDetForm.Designer.cs">
+      <DependentUpon>EmpAddDeductDetForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormLayer\EmpAddDeductForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLayer\EmpAddDeductForm.Designer.cs">
+      <DependentUpon>EmpAddDeductForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormLayer\EmpAttendanceForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLayer\EmpAttendanceForm.Designer.cs">
+      <DependentUpon>EmpAttendanceForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormLayer\EmpLeaveForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLayer\EmpLeaveForm.Designer.cs">
+      <DependentUpon>EmpLeaveForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormLayer\EmployeeFlagForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLayer\EmployeeFlagForm.Designer.cs">
+      <DependentUpon>EmployeeFlagForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormLayer\EmployeeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLayer\EmployeeForm.Designer.cs">
+      <DependentUpon>EmployeeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormLayer\EmpSalaryForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLayer\EmpSalaryForm.Designer.cs">
+      <DependentUpon>EmpSalaryForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormLayer\ExpensIncomForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLayer\ExpensIncomForm.Designer.cs">
+      <DependentUpon>ExpensIncomForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormLayer\ExpensPrintForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLayer\ExpensPrintForm.Designer.cs">
+      <DependentUpon>ExpensPrintForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormLayer\FloorForm1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLayer\FloorForm1.Designer.cs">
+      <DependentUpon>FloorForm1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormLayer\GradeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLayer\GradeForm.Designer.cs">
+      <DependentUpon>GradeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormLayer\PaymentsTrejForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLayer\PaymentsTrejForm.designer.cs">
+      <DependentUpon>PaymentsTrejForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormLayer\SafesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLayer\SafesForm.Designer.cs">
+      <DependentUpon>SafesForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormLayer\SafeTransferredForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLayer\SafeTransferredForm.Designer.cs">
+      <DependentUpon>SafeTransferredForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormLayer\StuDegreeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLayer\StuDegreeForm.Designer.cs">
+      <DependentUpon>StuDegreeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormLayer\StudentAttendanceForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLayer\StudentAttendanceForm.Designer.cs">
+      <DependentUpon>StudentAttendanceForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormLayer\StudentClassForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLayer\StudentClassForm.Designer.cs">
+      <DependentUpon>StudentClassForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormLayer\StudentForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLayer\StudentForm.Designer.cs">
+      <DependentUpon>StudentForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormLayer\StudPaymentForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLayer\StudPaymentForm.Designer.cs">
+      <DependentUpon>StudPaymentForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormLayer\StuLeavingForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLayer\StuLeavingForm.Designer.cs">
+      <DependentUpon>StuLeavingForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormLayer\SubjectForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLayer\SubjectForm.Designer.cs">
+      <DependentUpon>SubjectForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormLayer\TestForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLayer\TestForm.Designer.cs">
+      <DependentUpon>TestForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormLayer\TestMonthForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLayer\TestMonthForm.Designer.cs">
+      <DependentUpon>TestMonthForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormLayer\TreasuryPaymentForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLayer\TreasuryPaymentForm.Designer.cs">
+      <DependentUpon>TreasuryPaymentForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reports\ReportCardPrint2.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\ReportCardPrint2.Designer.cs">
+      <DependentUpon>ReportCardPrint2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SmartNurseryDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SmartNurseryDataSet.xsd</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="FormLayer\DailyExpensIncmForm.resx">
+      <DependentUpon>DailyExpensIncmForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormLayer\EmpAddDeductDetForm.resx">
+      <DependentUpon>EmpAddDeductDetForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormLayer\EmpAddDeductForm.resx">
+      <DependentUpon>EmpAddDeductForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormLayer\EmpAttendanceForm.resx">
+      <DependentUpon>EmpAttendanceForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormLayer\EmpLeaveForm.resx">
+      <DependentUpon>EmpLeaveForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormLayer\EmpSalaryForm.resx">
+      <DependentUpon>EmpSalaryForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormLayer\ExpensIncomForm.resx">
+      <DependentUpon>ExpensIncomForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormLayer\ExpensPrintForm.resx">
+      <DependentUpon>ExpensPrintForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormLayer\PaymentsTrejForm.resx">
+      <DependentUpon>PaymentsTrejForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormLayer\SafeTransferredForm.resx">
+      <DependentUpon>SafeTransferredForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormLayer\StuDegreeForm.resx">
+      <DependentUpon>StuDegreeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormLayer\StudentAttendanceForm.resx">
+      <DependentUpon>StudentAttendanceForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormLayer\StudPaymentForm.resx">
+      <DependentUpon>StudPaymentForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormLayer\StuLeavingForm.resx">
+      <DependentUpon>StuLeavingForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormLayer\TestMonthForm.resx">
+      <DependentUpon>TestMonthForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormLayer\TreasuryPaymentForm.resx">
+      <DependentUpon>TreasuryPaymentForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\ReportCardPrint2.resx">
+      <DependentUpon>ReportCardPrint2.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="DatabaseLayer\DataClasses.dbml.layout">
+      <DependentUpon>DataClasses.dbml</DependentUpon>
+    </None>
+    <EmbeddedResource Include="FormLayer\ClassForm.resx">
+      <DependentUpon>ClassForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormLayer\EmployeeFlagForm.resx">
+      <DependentUpon>EmployeeFlagForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormLayer\EmployeeForm.resx">
+      <DependentUpon>EmployeeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormLayer\FloorForm1.resx">
+      <DependentUpon>FloorForm1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormLayer\GradeForm.resx">
+      <DependentUpon>GradeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormLayer\SafesForm.resx">
+      <DependentUpon>SafesForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormLayer\StudentClassForm.resx">
+      <DependentUpon>StudentClassForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormLayer\StudentForm.resx">
+      <DependentUpon>StudentForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormLayer\SubjectForm.resx">
+      <DependentUpon>SubjectForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormLayer\TestForm.resx">
+      <DependentUpon>TestForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="App.config" />
+    <None Include="DatabaseLayer\DataClasses.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>DataClasses.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataSet\DataSetCardPrint.xsc">
+      <DependentUpon>DataSetCardPrint.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet\DataSetCardPrint.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetCardPrint.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSet\DataSetCardPrint.xss">
+      <DependentUpon>DataSetCardPrint.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="SmartNurseryDataSet.xsc">
+      <DependentUpon>SmartNurseryDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="SmartNurseryDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SmartNurseryDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SmartNurseryDataSet.xss">
+      <DependentUpon>SmartNurseryDataSet.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\reviewers.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SmartIcon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\actions_addcircled.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\actions_addcircled1.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\actions_addcircled2.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\editquery.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\printtitles.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\update.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\security_fingerprint.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\actions_addcircled3.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\editquery1.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\printtitles1.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\update1.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\security_fingerprint1.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close1.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\datapanel.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\groupheader.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\reviewers1.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bo_contact.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\financial.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\expandcollapse.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\employeesummary.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\employeesummary1.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\employeetasklist.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bo_contact1.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bo_lead.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\showlegend.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\financial1.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\business_dollar.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\barcodeshowtext.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\selectlabelspivottable.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bo_position.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bo_department.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bo_mydetails.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\date&amp;time.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bo_security_permission_member.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\currency.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gaugestylelinearhorizontal.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\costanalysis.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrowturnright.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Securety Module\Securety Module\Securety Module.csproj">
+      <Project>{E1B9FF85-8B47-41F6-99B4-DA3CDD4BA703}</Project>
+      <Name>Securety Module</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

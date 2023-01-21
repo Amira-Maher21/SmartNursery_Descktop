@@ -1,0 +1,437 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{E1B9FF85-8B47-41F6-99B4-DA3CDD4BA703}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SecuretyModule</RootNamespace>
+    <AssemblyName>Securety Module</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Accessibility" />
+    <Reference Include="DevExpress.BonusSkins.v19.2" />
+    <Reference Include="DevExpress.Data.v19.2" />
+    <Reference Include="DevExpress.Data.Desktop.v19.2" />
+    <Reference Include="DevExpress.Utils.v19.2" />
+    <Reference Include="DevExpress.Sparkline.v19.2.Core" />
+    <Reference Include="DevExpress.XtraBars.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v19.2" />
+    <Reference Include="DevExpress.Printing.v19.2.Core" />
+    <Reference Include="DevExpress.XtraGrid.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPrinting.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DB\DataClassesSecurityMoule.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataClassesSecurityMoule.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\MainPermessions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MainPermessions.Designer.cs">
+      <DependentUpon>MainPermessions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\MainSecureForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MainSecureForm.Designer.cs">
+      <DependentUpon>MainSecureForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Ranks.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Ranks.Designer.cs">
+      <DependentUpon>Ranks.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\RanksPermessions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\RanksPermessions.Designer.cs">
+      <DependentUpon>RanksPermessions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SubPermessions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SubPermessions.Designer.cs">
+      <DependentUpon>SubPermessions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\UpdatePassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\UpdatePassword.Designer.cs">
+      <DependentUpon>UpdatePassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\UserForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\UserForm.Designer.cs">
+      <DependentUpon>UserForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\UserInformation.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <None Include="ClassDiagram1.cd" />
+    <None Include="DB\DataClassesSecurityMoule.dbml.layout">
+      <DependentUpon>DataClassesSecurityMoule.dbml</DependentUpon>
+    </None>
+    <EmbeddedResource Include="Forms\Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MainPermessions.resx">
+      <DependentUpon>MainPermessions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MainSecureForm.resx">
+      <DependentUpon>MainSecureForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Ranks.resx">
+      <DependentUpon>Ranks.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\RanksPermessions.resx">
+      <DependentUpon>RanksPermessions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SubPermessions.resx">
+      <DependentUpon>SubPermessions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\UpdatePassword.resx">
+      <DependentUpon>UpdatePassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\UserForm.resx">
+      <DependentUpon>UserForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DB\DataClassesSecurityMoule.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>DataClassesSecurityMoule.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ids.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Untitled-1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\login %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\login %281%291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\actions_addcircled1.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\about_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\actions_addcircled.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\actions_addcircled11.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\actions_addcircled2.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\actions_addcircled3.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\actions_addcircled4.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\actions_addcircled5.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\actions_addcircled6.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\addparagraphtotableofcontents.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Amlak.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chart_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chart_32x321.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chart-pie.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clearheaderandfooter.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close1.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close2.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close3.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close4.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close5.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edittask_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\electronics_phoneiphone.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\expandcollapse_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gettingstarted_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\home_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\insert_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iphone.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kpi_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\newgroup_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\newgroup_32x321.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\newitem_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\packageproduct_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\printstartdate_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\printtitles.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\publicfix_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save as.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save as1.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save as2.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save as3.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save as4.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save as5.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save as6.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\saveandclose.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\saveas.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\saveas_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\saveas_16x161.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\saveas_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\saveas_32x321.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\saveas1.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\saveto_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\saveto_16x161.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\saveto_16x162.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\saveto_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\saveto_32x321.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\saveto_32x322.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\programmer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\share.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\permission.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\permission %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\shield.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\diploma.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\alert.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\shield %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\security.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

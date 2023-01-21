@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="SmartNurserySec" Class="DataClassesSecurityMouleDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=41.41.240.84;Initial Catalog=SmartNurserySec;User ID=admin" SettingsObjectName="SecuretyModule.Properties.Settings" SettingsPropertyName="SmartNurserySecConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Action" Member="Actions">
+    <Type Name="Action">
+      <Column Name="ActionID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ActionName" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="IsActive" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Notes" Type="System.String" DbType="NChar(250)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.UserActio" Member="UserActios">
+    <Type Name="UserActio">
+      <Column Name="Name" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ActionName" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ActionDetail" Member="ActionDetails">
+    <Type Name="ActionDetail">
+      <Column Name="ActionDetailId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ActionID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ActionDetailName" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="IsActive" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Notes" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Rank" Member="Ranks">
+    <Type Name="Rank">
+      <Column Name="RankID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="RankName" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="IsActive" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.[User]" Member="Users">
+    <Type Name="User">
+      <Column Name="UserCode" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="RankID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PassWord" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="IsActive" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Notes" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Function Name="dbo.ActionDetailInsetUpdate" Method="ActionDetailInsetUpdate">
+    <Parameter Name="ActionDetailName" Parameter="actionDetailName" Type="System.String" DbType="NVarChar(100)" />
+    <Parameter Name="ActionID" Parameter="actionID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Notes" Parameter="notes" Type="System.String" DbType="NChar(250)" />
+    <ElementType Name="ActionDetailInsetUpdateResult">
+      <Column Name="" Member="Column1" Type="System.Decimal" DbType="Decimal(38,0)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.ActionDetailSelectByAction" Method="ActionDetailSelectByAction">
+    <Parameter Name="ActionID" Parameter="actionID" Type="System.String" DbType="NVarChar(100)" />
+    <ElementType Name="ActionDetailSelectByActionResult">
+      <Column Name="ActionDetailId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ActionID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ActionDetailName" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="IsActive" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Notes" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.ActionInsetUpdate" Method="ActionInsetUpdate">
+    <Parameter Name="ActionName" Parameter="actionName" Type="System.String" DbType="NVarChar(100)" />
+    <Parameter Name="Notes" Parameter="notes" Type="System.String" DbType="NChar(250)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.ChangePassword" Method="ChangePassword">
+    <Parameter Name="Name" Parameter="name" Type="System.String" DbType="NVarChar(100)" />
+    <Parameter Name="password" Type="System.String" DbType="NChar(250)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.CheckAction" Method="CheckAction">
+    <Parameter Name="Name" Parameter="name" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="ActionName" Parameter="actionName" Type="System.String" DbType="NVarChar(100)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SelectUserNameActions" Method="SelectUserNameActions">
+    <Parameter Name="UserName" Parameter="userName" Type="System.String" DbType="NVarChar(50)" />
+    <ElementType Name="SelectUserNameActionsResult">
+      <Column Name="ActionName" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.UserActioDelete" Method="UserActioDelete">
+    <Parameter Name="Name" Parameter="name" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="ActionName" Parameter="actionName" Type="System.String" DbType="NVarChar(100)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.UserActioDetailInser" Method="UserActioDetailInser">
+    <Parameter Name="Name" Parameter="name" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="ActionDetailName" Parameter="actionDetailName" Type="System.String" DbType="NVarChar(100)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.UserActioInser" Method="UserActioInser">
+    <Parameter Name="Name" Parameter="name" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="ActionName" Parameter="actionName" Type="System.String" DbType="NVarChar(100)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.UserLogin" Method="UserLogin">
+    <Parameter Name="UserName" Parameter="userName" Type="System.String" DbType="NVarChar(50)" />
+  </Function>
+</Database>
